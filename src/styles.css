@@ -1,0 +1,117 @@
+/* Estilos generales de la página */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #252e3d;
+  font-family: sans-serif;
+}
+
+/* Estilos para centrar toda la aplicación en la pantalla */
+#root {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  gap: 30px;
+  place-content: center;
+}
+
+/* Estilos del tablero de tic-tac-toe */
+/* Grid de 3 columnas, tamaño 300x300px y espaciado entre casillas de 8px*/
+#tablero {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  min-width: 300px;
+  min-height: 300px;
+}
+
+/* Estilos para las casillas del tablero */
+/* Grid con contenido centrado, bordes redondeados */
+.casilla {
+  display: grid;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  place-content: center;
+  font-size: 4em;
+  font-weight: bold;
+  background-color: #344054;
+}
+
+/* Letras en color fluorescentes */
+.fluorescent {
+  color: #bef200 !important;
+  text-shadow: #bef200 0 0 5px;
+}
+
+/* Estilos para el marcador de turno (contenedor) */
+.indicadorTurno {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  gap: 10px;
+}
+
+/* Estilos para el marcador de turno (hijo) */
+.indicadorTurno div {
+  display: grid;
+  place-content: center;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #344054;
+  height: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+
+/* Estilos para el turno que esté activo */
+.indicadorTurno > .turnoActivo {
+  background-color: #bef200;
+  color: #252e3d;
+}
+
+/* Botón de reiniciar la partida */
+.reiniciar {
+  border: 0px;
+  padding: 8px;
+  background-color: #344054;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Título de la aplicación */
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Estilos para el historial de jugadas (contenedor) */
+.pasos {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #344054;
+  gap: 3px;
+  padding: 5px;
+  border-radius: 5px 0px 0px 5px;
+  right: 0;
+  top: 40%;
+}
+
+/*Estilos para cada marcador de jugada */
+.pasos div {
+  padding: 3px;
+  background-color: #252e3d;
+  border-radius: 3px;
+  text-align: center;
+  color: #344054;
+  /* opacity: 0; */
+}
+
+/* Estilos para una jugada completada */
+.pasos .fluorescent {
+  background-color: #bef200 !important;
+  color: #252e3d !important;
+}
